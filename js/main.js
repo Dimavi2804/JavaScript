@@ -3,7 +3,7 @@ function calcularNuevamente () {
         if (calcularNuevamente) {
             calcularHonorario ();
         } else {
-            alert ("Muchas gracias");
+            alert ("Muchas gracias por usar el calculador.");
         }
 }
 function calcularHonorario (){
@@ -11,12 +11,12 @@ function calcularHonorario (){
 let valorIngresado
 
     while (true) {
-        valorIngresado = parseInt(prompt("Ingrese 1 si desea vender un vehículo o ingrese 2 si desea vender un inmueble"));
+        valorIngresado = parseInt(prompt("Ingrese las siguientes opciones para usar el calculador: \n1 - si desea vender un vehículo\n2 - si desea vender un inmueble\n3 - salir."));
 
-        if (valorIngresado === 1 || valorIngresado === 2) {
+        if (valorIngresado === 1 || valorIngresado === 2 || valorIngresado === 3) {
             break;
         } else {
-            alert("Debe ingresar 1 o 2.");
+            alert("Debe ingresar 1, 2 o 3.");
         }
     }
 
@@ -36,8 +36,10 @@ let valorIngresado
             } else {
                 let honorario = valorInmueble * 0.01;
                 alert("El honorario a pagar es U$S " + honorario);
+            }
                 calcularNuevamente ();
-        }
+    } else if (valorIngresado === 3) {
+        alert("Gracias por usar el calcuador.");
     }
 }
 
