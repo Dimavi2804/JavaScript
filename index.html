@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Calculador de Honorarios</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculador de Honorarios</h1>
+        <form id="honorariosForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="number" id="telefono" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="tipo">Selecciona lo que deseas vender:</label>
+            <select id="tipo" required>
+                <option value="">--Seleccione--</option>
+                <option value="inmueble">Inmueble</option>
+                <option value="vehiculo">Vehículo</option>
+            </select>
+            <label for="precio">Precio de venta en dólares:</label>
+            <input type="number" id="precio" required>
+            <button type="submit">Calcular Honorarios</button>
+        </form>
+        <button id="mostrarDatos">Mostrar Datos Guardados</button>
+        <div id="resultado"></div>
+        <div id="datosGuardados"></div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
